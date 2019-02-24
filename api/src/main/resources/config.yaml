@@ -1,0 +1,14 @@
+kumuluzee:
+  health:
+    servlet:
+      mapping: /health
+      enabled: true
+    checks:
+      data-source-health-check:
+        jndi-name: jdbc/mainDB
+  datasources:
+    - jndi-name: jdbc/mainDB
+      connection-url: jdbc:postgresql://localhost:5432/new-world
+      username: postgres
+      password: postgres
+      max-pool-size: 20
