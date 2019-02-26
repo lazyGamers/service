@@ -1,4 +1,10 @@
 kumuluzee:
+  name: new-world-game
+  version: 1.0.0
+  env:
+    name: dev
+  server:
+    base-url: http://localhost:8080
   health:
     servlet:
       mapping: /health
@@ -12,3 +18,12 @@ kumuluzee:
       username: postgres
       password: postgres
       max-pool-size: 20
+  security:
+    keycloak:
+      json: '{
+              "realm": "new-world",
+              "bearer-only": true,
+              "auth-server-url": "https://keycloak.mjamsek.com/auth",
+              "ssl-required": "external",
+              "resource": "game-service"
+            }'
