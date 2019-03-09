@@ -12,10 +12,13 @@
     <artifactId>services</artifactId>
 
     <dependencies>
+        <!-- Modules -->
         <dependency>
             <groupId>com.lazygamers</groupId>
             <artifactId>entities</artifactId>
         </dependency>
+
+        <!-- KumuluzEE -->
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-cdi-weld</artifactId>
@@ -28,6 +31,8 @@
             <groupId>com.kumuluz.ee.security</groupId>
             <artifactId>kumuluzee-security-keycloak</artifactId>
         </dependency>
+
+        <!-- External -->
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-jetty94-adapter</artifactId>

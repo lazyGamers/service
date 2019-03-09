@@ -21,14 +21,14 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <kumuluzee.version>3.1.0</kumuluzee.version>
+        <!-- KumuluzEE -->
+        <kumuluzee.version>3.2.0</kumuluzee.version>
         <kumuluzee-security.version>1.0.1</kumuluzee-security.version>
         <kumuluzee-rest.version>1.2.3</kumuluzee-rest.version>
         <kumuluzee-cors.version>1.0.5</kumuluzee-cors.version>
         <kumuluzee-health.version>1.0.2</kumuluzee-health.version>
-        <kumuluzee-graphql.version>1.0.0</kumuluzee-graphql.version>
 
-        <jaxb.version>2.3.1</jaxb.version>
+        <!-- External -->
         <postgresql.version>42.2.5</postgresql.version>
         <keycloak-jetty-adapter.version>4.8.3.Final</keycloak-jetty-adapter.version>
     </properties>
@@ -43,6 +43,7 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- Modules -->
             <dependency>
                 <groupId>com.lazygamers</groupId>
                 <artifactId>authorization</artifactId>
@@ -59,18 +60,7 @@
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
 
-            <dependency>
-                <groupId>javax.xml.bind</groupId>
-                <artifactId>jaxb-api</artifactId>
-                <version>${jaxb.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>${postgresql.version}</version>
-            </dependency>
-
-
+            <!-- KumuluzEE -->
             <dependency>
                 <groupId>com.kumuluz.ee.security</groupId>
                 <artifactId>kumuluzee-security-keycloak</artifactId>
@@ -91,22 +81,18 @@
                 <artifactId>kumuluzee-health</artifactId>
                 <version>${kumuluzee-health.version}</version>
             </dependency>
+
+            <!-- External -->
             <dependency>
-                <groupId>com.kumuluz.ee.graphql</groupId>
-                <artifactId>kumuluzee-graphql</artifactId>
-                <version>${kumuluzee-graphql.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.kumuluz.ee.graphql</groupId>
-                <artifactId>kumuluzee-graphql-ui</artifactId>
-                <version>${kumuluzee-graphql.version}</version>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.keycloak</groupId>
                 <artifactId>keycloak-jetty94-adapter</artifactId>
                 <version>${keycloak-jetty-adapter.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 

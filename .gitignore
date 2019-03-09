@@ -99,3 +99,7 @@ fabric.properties
 .idea/httpRequests
 
 ObjectStore/
+.project
+.classpath
+.factorypath
+.settings/

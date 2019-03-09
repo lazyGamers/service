@@ -4,6 +4,8 @@
 
         <jta-data-source>jdbc/mainDB</jta-data-source>
 
+        <class>com.lazygamers.entities.logs.LogEntry</class>
+
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>

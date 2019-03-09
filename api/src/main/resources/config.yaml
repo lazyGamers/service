@@ -19,6 +19,7 @@ kumuluzee:
       password: postgres
       max-pool-size: 20
   security:
+    disable-jetty-auth: true
     keycloak:
       json: '{
               "realm": "new-world",
@@ -27,3 +28,7 @@ kumuluzee:
               "ssl-required": "external",
               "resource": "game-service"
             }'
+
+game-service:
+  logging:
+    severity: DEBUG
